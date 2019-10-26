@@ -1,0 +1,50 @@
+#in the name of GOD   
+class stack:
+    def __init__(self):
+        self._data = []
+
+    def get_len(self):
+        return len(self._data)
+
+    def push(self, inp):
+        self._data.append(inp)
+
+    def is_empty(self):
+        return self.get_len() == 0
+
+    def top(self):
+        if self.is_empty():
+            print("Shit")
+            return None
+
+        else:
+            return self._data[-1]
+
+    def pop(self):
+        if self.is_empty():
+            print("Shit")
+            return None
+
+        else:
+            temp = self._data[-1]
+            self._data.pop()
+            return temp
+
+    def show(self):
+        for i in self._data:
+            print(i,'-> ',  end='')
+        print()
+
+# 
+
+
+st = stack()
+st.push(4)
+st.push(6)
+st.push(51)
+st.push(57)
+st.push(58)
+
+st.top()
+st.pop()
+st.show()
